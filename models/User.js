@@ -3,7 +3,13 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema({
   username: String,
-  password: String
+  password: String,
+  photoUrl: String,
+  role:{
+    type:String,
+    enum:['GUEST', 'LOCAL', 'TRAVELER'],
+    default: 'GUEST',
+  }  
 }, {
   timestamps: {
     createdAt: 'created_at',
@@ -11,5 +17,8 @@ const userSchema = new Schema({
   }
 });
 
+
+
 const User = mongoose.model('User', userSchema);
+
 module.exports = User;
