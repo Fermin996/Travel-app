@@ -15,9 +15,9 @@
 
       {{# each users}}
       <div class="pic-cards">
-        <a href="/profile"><img src="{{photoUrl}}" width="150" class="card"/></a>
-       <p>{{username}}</p>
-       <p>References: {{references}}</p>
+        <a href="/profile/{{this._id}}"><img src="{{this.photoUrl}}" width="150" class="card"/></a>
+       <p>{{this.username}}</p>
+       <p>References: {{this.references}}</p>
        <p>{x-day} to {x-day}</p>
        <p>I'm here because I got tired of my dog barking. Looking for some people to hang with!</p>
       </div>
