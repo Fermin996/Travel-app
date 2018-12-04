@@ -475,28 +475,24 @@ span {
     .right-chat .icon-link--twitter {
       left: auto;
       right: 5px; }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px; }
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%; }
-
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding-top: 100%; }
+  .right-chat * {
+    box-sizing: border-box; }
+  .right-chat body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px; }
+  .right-chat #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%; }
+  .right-chat .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding-top: 100%; }
 
 /*# sourceMappingURL=style.css.map */
