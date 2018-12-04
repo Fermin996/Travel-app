@@ -5,6 +5,10 @@ const userSchema = new Schema({
   username: String,
   password: String,
   photoUrl: String,
+  references:{
+    type: Number,
+    default: 0
+  }, 
   role:{
     type:String,
     enum:['GUEST', 'LOCAL', 'TRAVELER'],
