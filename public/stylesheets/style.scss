@@ -15,19 +15,47 @@ background-color: #f4511e;
 }
 
 .navbar  {
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
+  text-align: center;
   color:white;
-  display: flex;
+  height: 80px;
+  
+  
+  // justify-content: space-between;
+  // height: 40px;
+}
+
+.navbar .navbar-item {
+
+ display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content:flex-end;
-  justify-content: space-between;
-  height: 40px;
+ 
 }
 
 
+
+
+#logo:hover{
+  opacity: .3;
+  width: 150px;
+  transition: 0.7s;
+  cursor: pointer;
+}
+#logo{
+  transition: 0.7s;
+  width: 150px;
+  cursor: pointer;
+
+}
 .mainTitle{
+  font-size: 25px;
+  color: burlywood;
+  text-align: center;
+}
+.mainTitle2{
   font-size: 25px;
   color: burlywood;
   text-align: center;
@@ -40,11 +68,15 @@ input{
   border-radius: 50px;
 }
 
-#where{
-  padding:0px;
-  
+#search {
+  text-align: center;
+  height: 50px;
+  font-size: 20px;
 }
 
+::placeholder{
+  font-size: 20px;
+}
 
 #LNDBTN{
   
@@ -91,7 +123,32 @@ input{
 }
 
 
- #logo{
-  height: 100px;
-  padding-top: 10px;
+footer{
+
+  background: #fae4c2;
+  height: 80px;
 }
+
+
+
+
+#footerlogos {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:flex-end;
+  justify-content:space-evenly;
+  
+  
+}
+#footerlogos img {
+height: 40px;
+transition: .3s;
+}
+
+#footerlogos img:hover{
+  height: 40px;
+  opacity: .3;
+  transition: .3s;
+  }
