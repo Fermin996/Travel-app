@@ -219,3 +219,39 @@ transition: .3s;
     padding-right:10px;
     padding-left:10px
   } 
+
+  .chat-box{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: skyblue;
+  }
+
+  .left{
+    justify-content: flex-start;
+  }
+
+  .right{
+    justify-content: flex-end;
+    margin-top: 50px;
+    max-width: 30%;
+  }
+
+  .left-chat{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: orange;
+    border: solid 2px;
+    border-radius:30px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .right-chat{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: orange;
+    border: solid 2px;
+    border-radius:30px;
+    padding: 10px;
+    width: auto;
+  }

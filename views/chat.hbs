@@ -1,0 +1,25 @@
+
+
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
+
+<h2>Chat</h2>
+
+<div class="chat-box">
+  <div class="left">
+  <p class="left-chat">Yo whats up Fernan</p>
+  </div>
+  <div class="right">
+  <p class="right-chat">Yo whats up Mexicant i jhate dogs and fanta bro ahts up dawg</p>
+  </div>
+</div>
+<input type=text><button type="button" class="send-button">Send</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
