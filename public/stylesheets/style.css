@@ -246,7 +246,6 @@ span {
   padding-right: 10px;
   padding-left: 10px; }
 
-<<<<<<< HEAD
 .chat-box {
   display: flex;
   flex-wrap: wrap;
@@ -277,7 +276,6 @@ span {
   border-radius: 30px;
   padding: 10px;
   width: auto; }
-=======
 #rating {
   width: 300px; }
 
@@ -482,6 +480,5 @@ label {
   .icon-link--twitter {
     left: auto;
     right: 5px; }
->>>>>>> 3bf2499f3c09758009dd748d62e7e95275fd9624
 
 /*# sourceMappingURL=style.css.map */

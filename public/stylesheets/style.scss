@@ -332,7 +332,6 @@ font-weight: bold;
     padding-left:10px
   } 
 
-<<<<<<< HEAD
   .chat-box{
     display: flex;
     flex-wrap: wrap;
@@ -367,7 +366,6 @@ font-weight: bold;
     border-radius:30px;
     padding: 10px;
     width: auto;
-=======
 
   #rating{
 
@@ -612,15 +610,15 @@ font-weight: bold;
     }
   }
   
-  // input {
-  //   display: block;
-  //   width: 100%;
-  //   margin-top: 5px;
-  //   padding-bottom: 5px;
-  //   font-size: 16px;
-  //   border-bottom: 1px solid rgba(0,0,0,0.4);
-  //   text-align: center;
-  // }
+  input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    text-align: center;
+  }
   
   .forgot-pass {
     margin-top: 15px;
@@ -679,5 +677,4 @@ font-weight: bold;
       left: auto;
       right: 5px;
     }
->>>>>>> 3bf2499f3c09758009dd748d62e7e95275fd9624
   }
