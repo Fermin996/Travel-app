@@ -48,7 +48,14 @@ input {
   width: 500px;
   height: 30px;
   border: solid #686363 2px;
-  border-radius: 50px; }
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px grey;
+  transition: 1s; }
+
+input:hover {
+  width: 500px;
+  height: 50px;
+  transition: 1s; }
 
 #search {
   text-align: center;
@@ -63,7 +70,8 @@ input {
   height: 70px;
   border-radius: 50px;
   transition: 0.5s;
-  background: orange; }
+  background: orange;
+  box-shadow: 5px 5px 5px grey; }
 
 #LNDBTN:hover {
   background-color: #f4511e;
@@ -96,7 +104,8 @@ input {
 
 footer {
   background: #fae4c2;
-  height: 80px; }
+  height: 80px;
+  box-shadow: 5px 5px 5px 10px grey; }
 
 #footerlogos {
   display: flex;
@@ -113,5 +122,44 @@ footer {
   height: 40px;
   opacity: .3;
   transition: .3s; }
+
+#about {
+  display: flex;
+  background-color: rgba(75, 75, 75, 0.1);
+  width: 500px;
+  height: 120px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+#aboutinfo {
+  display: flex;
+  flex-direction: column; }
+
+#imgprofile {
+  background-image: url("../images/chi-rene.JPG");
+  background-position: center;
+  background-size: cover;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 400px; }
+
+#chat {
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: rgba(193, 199, 208, 0.3); }
+
+.bio {
+  display: flex;
+  flex-wrap: wrap; }
+
+span {
+  width: 40%;
+  padding-right: 10px;
+  padding-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */
