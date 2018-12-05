@@ -12,6 +12,7 @@ const path         = require('path');
 const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
+const passport     = require('./helpers/passport');
     
 
 mongoose
@@ -27,6 +28,9 @@ const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
 const app = express();
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Middleware Setup
 app.use(logger('dev'));
@@ -72,20 +76,22 @@ app.use(session({
   store: new MongoStore( { mongooseConnection: mongoose.connection })
 }))
 app.use(flash());
-require('./passport')(app);
+//require('./helpers/passport')(app);
     
 
 const index = require('./routes/index');
 const profile = require('./routes/profile');
 const authRoutes = require('./routes/auth');
 const results = require('./routes/results');
-const myProfile = require('./routes/myProfile');
+//const myProfile = require('./routes/myProfile');
+const chat = require('./routes/chat');
 
 
 app.use('/auth', authRoutes);
 app.use('/', index);
 app.use('/profile', profile);
 app.use('/results', results);
-app.use('/myProfile', myProfile)
+//app.use('/myProfile', myProfile)
+app.use('/chat', chat)
 
 module.exports = app;

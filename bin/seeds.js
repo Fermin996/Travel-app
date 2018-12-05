@@ -4,10 +4,8 @@
 // $ node bin/seeds.js
 
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 const User = require("../models/User");
 
-const bcryptSalt = 10;
 
 mongoose
   .connect('mongodb://localhost/proj-prototype', {useNewUrlParser: true})
