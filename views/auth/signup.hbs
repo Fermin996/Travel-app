@@ -1,83 +1,58 @@
-{{!-- <h2>Signup</h2>
 
-<form action="/auth/signup" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
+ <link rel="stylesheet" href="/stylesheets/style.css" />
+
+<section class="Signup-section">
+
+
+ <div class="uk-position-small uk-position-center uk-overlay uk-overlay-default">
+<form action="/auth/signup" method="POST" id="signup-form">
+  <h2 class="tracking-in-expand">SIGN UP</h2>
+   <label for="First-Name"></label>
+   
+  <input  id="input-signup" type="text" name="First-name" placeholder = "First Name" >
+  <br><br>
+
+
+  <label for="Last Name"></label>
+  <input id="input-signup" type="email" name="email" placeholder="Last Name">
+  <br><br>
+  
+  <label for="email"></label>
+  <input id="input-signup" type="email" name="email" placeholder="Email">
+  <br><br>
+
+  <label for="username-signup"></label>
+  <input id="input-signup" type="text" name="username" placeholder="Username">
 
   <br><br>
 
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  <br>
+  <label for="password"></label>
+  <input id="input-signup" type="password" name="password" placeholder="Your password">
+  <br><br>
+
+  <label for="password2"></label>
+  <input id="input-signup" type="password" name="password" placeholder="Confirm Your Password">
+ <br>
+
+
   {{#if message }}
     <div class="error-message">{{ message }}</div>
   {{/if}}
 
-  <br><br>
+  <button id="login-button">Create account</button>
 
-  <button>Create account</button>
-
-  <p class="account-message">
-    Do you already have an account?
+  <p class="account-message"><br>
+    Do you already have an account?<br>
     <a href="/auth/login">Login</a>
   </p>
-</form> --}}
-
-<div class="content">
-{{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
-    <div class="uk-position-medium uk-position-center-right uk-overlay uk-overlay-default"> --}}
-<div class="cont">
-  <div class="form sign-in">
-    <h2>Welcome back,</h2>
-    <label>
-      <span>Email</span>
-      <input type="email" />
-    </label>
-    <label>
-      <span>Password</span>
-      {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
-      <input type="password" />
-    </label>
-    <a href="/home"><p class="forgot-pass" >Forgot password? </a></p>
-    <button type="button" class="submit">Sign In</button>
-    <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
-  </div>
-
-  
-  <div class="sub-cont">
-    <div class="img">
-      <div class="img__text m--up">
-        <h2>New here?</h2>
-        <p>Sign up and discover great amount of new opportunities!</p>
-      </div>
-      
-      <div class="img__btn">
-        <span class="m--up">Sign Up</span>
-        <span class="m--in">Sign In</span>
-      </div>
-    </div>
-    <div class="form sign-up">
-     
-      <label>
-        <span>Name</span>
-        <input type="text" />
-      </label>
-      <label>
-        <span>Email</span>
-        <input type="email" />
-      </label>
-      <label>
-        <span>Password</span>
-        <input type="password" />
-      </label>
-      <button type="button" class="submit">Sign Up</button>
-      <button type="button" class="fb-btn">Join with <span>facebook</span></button>
-    </div>
-  </div>
+</form>
 </div>
+</section>
 
 
-</div></div>
- 
+<script>
+
+
+
+</script>
