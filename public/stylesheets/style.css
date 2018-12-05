@@ -282,12 +282,8 @@ input, button {
   border: none;
   outline: none;
   background: none;
-<<<<<<< HEAD
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
-=======
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   width: 260px; }
->>>>>>> 01cf5f5d2caba5a487a4065d5fcc01ce16891e45
 
 .tip {
   font-size: 20px;
@@ -300,12 +296,8 @@ input, button {
   width: 900px;
   height: 550px;
   margin: 0 auto 100px;
-<<<<<<< HEAD
-  background: #fff; }
-=======
   background: #fff;
   padding-top: 30px; }
->>>>>>> 01cf5f5d2caba5a487a4065d5fcc01ce16891e45
 
 .form {
   position: relative;

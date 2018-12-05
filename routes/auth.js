@@ -12,8 +12,8 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") });
 });
 
-router.post("/login", passport.authenticate("local", {
-  successRedirect: "/:id",
+router.post("/login", isLoggedIn, passport.authenticate("local", {
+  successRedirect: "/",
   failureRedirect: "/auth/login",
   failureFlash: true,
   passReqToCallback: true
@@ -62,3 +62,10 @@ router.get("/logout", (req, res) => {
 });
 
 module.exports = router;
+
+function isLoggedIn(req, res, next){
+  if (req.isAuthenticated()){
+    return next();
+  }
+ res.redirect('/') 
+}
