@@ -1,7 +1,12 @@
 const express = require('express');
 const router  = express.Router();
-//const User = require('../models/User');
-const Edit = require('../models/myProfile');
+const User = require('../models/User');
+
+
+
+
+
+// const Edit = require('../models/myProfile');
 
 // router.get('/:id', (req, res, next) => {
 //   const { id } = req.params;
@@ -14,50 +19,50 @@ const Edit = require('../models/myProfile');
 //   })
 // });
 
-router.get('/', (req, res, next)=>{
+// router.get('/', (req, res, next)=>{
 
-  Edit.find({user: req.user}, function(err,Edit){
-    if(err){
-      res.write('error')
-    }
-   return next()
-  })
+//   Edit.find({user: req.user}, function(err,Edit){
+//     if(err){
+//       res.write('error')
+//     }
+//    return next()
+//   })
 
-const edit = new Edit({
-  user: req.user,
-  bio: req.body.bio,
-  interests: req.body.interests,
-  languages: req.body.languages,
-  });
+// const edit = new Edit({
+//   user: req.user,
+//   bio: req.body.bio,
+//   interests: req.body.interests,
+//   languages: req.body.languages,
+//   });
 
-  edit.save()
-  .then(()=>{
-    return next()
-  })
-  .catch(err=>{
-    console.log(err)
-  })
+//   edit.save()
+//   .then(()=>{
+//     return next()
+//   })
+//   .catch(err=>{
+//     console.log(err)
+//   })
 
-  res.render('myProfile')
-})
+//   res.render('myProfile')
+// })
 
-console.log('well at least something is working')
-
-
+// console.log('well at least something is working')
 
 
-module.exports = router;
 
-function isLoggedIn(req, res, next){
-  if (req.isAuthenticated()){
-    return next();
-  }
- res.redirect('/') 
-}
 
-function notLoggedIn(req, res, next){
-  if (!req.isAuthenticated()){
-    return next();
-  }
- res.redirect('/') 
-}
+// module.exports = router;
+
+// function isLoggedIn(req, res, next){
+//   if (req.isAuthenticated()){
+//     return next();
+//   }
+//  res.redirect('/') 
+// }
+
+// function notLoggedIn(req, res, next){
+//   if (!req.isAuthenticated()){
+//     return next();
+//   }
+//  res.redirect('/') 
+//}

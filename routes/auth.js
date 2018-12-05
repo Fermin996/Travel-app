@@ -1,27 +1,52 @@
 const express = require("express");
-const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
+const passport = require('passport');
 
-// Bcrypt to encrypt passwords
-const bcrypt = require("bcrypt");
-const bcryptSalt = 10;
 
+const isLogged = (req, res, next) => {
+  if (!req.app.locals.loggedUser) return res.redirect('/login');
+  next();
+}
+
+router.get('/', (req, res, next) => {
+  res.render('index');
+});
 
 router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") });
 });
 
-router.post("/login", isLoggedIn, passport.authenticate("local", {
-  successRedirect: "/",
-  failureRedirect: "/auth/login",
-  failureFlash: true,
-  passReqToCallback: true
-}));
+router.post("/login", passport.authenticate("local"), (req, res, next)=>{
+  req.app.locals.loggedUser = req.user
+  res.redirect('/myProfile')
+  // successRedirect: "/",
+  // failureRedirect: "/auth/login",
+  // failureFlash: true,
+  // passReqToCallback: true
+});
 
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
+
+router.get('/myprofile', isLogged, (req,res,next)=>{
+  const { loggedUser } = req.app.locals
+  res.render('myProfile', loggedUser)
+})
+
+router.post('/myprofile', (req, res, next) => {
+  const { loggedUser } = req.app.locals
+  
+  User.findByIdAndUpdate(loggedUser._id, req.body, {new: true})
+  .then(user => {
+    loggedUser = user
+    res.render('/myProfile')
+  })
+  .catch(err=>{
+    res.send(err)
+  })
+})
 
 router.post("/signup", (req, res, next) => {
   const username = req.body.username;
@@ -31,41 +56,6 @@ router.post("/signup", (req, res, next) => {
     return;
   }
 
-  User.findOne({ username }, "username", (err, user) => {
-    if (user !== null) {
-      res.render("auth/signup", { message: "The username already exists" });
-      return;
-    }
+})
 
-    const salt = bcrypt.genSaltSync(bcryptSalt);
-    const hashPass = bcrypt.hashSync(password, salt);
-
-    const newUser = new User({
-      username,
-      password: hashPass,
-      role: 'TRAVELER'
-    });
-
-    newUser.save()
-    .then(() => {
-      res.redirect("/");
-    })
-    .catch(err => {
-      res.render("auth/signup", { message: "Something went wrong" });
-    })
-  });
-});
-
-router.get("/logout", (req, res) => {
-  req.logout();
-  res.redirect("/");
-});
-
-module.exports = router;
-
-function isLoggedIn(req, res, next){
-  if (req.isAuthenticated()){
-    return next();
-  }
- res.redirect('/') 
-}
+module.exports = router
