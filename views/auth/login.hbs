@@ -1,0 +1,27 @@
+<video autoplay muted loop id="myVideo">
+  <source src="/images/edificios.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <div id="login-square">
+  <form action="/auth/login" method="POST" id="form-login">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" placeholder="Username">
+
+  <br><br>
+
+  <label for="password">Password</label>
+  <input id="username" type="password" name="password" placeholder="Password">
+  <br>
+  {{#if message }}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <br><br>
+
+ 
+  </p>
+</form>
+</div>
+</div>

@@ -9,6 +9,7 @@ const userSchema = new Schema({
   languages: String,
   interests: String,
   rating: Number,
+  occupation: String,
   photoUrl: {
     type: String,
     default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0PYuh3GbOstcwFJLzp6ThS_ta-XK_4vDKt5U7i18cfexXRuMX'

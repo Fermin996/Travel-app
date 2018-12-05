@@ -339,40 +339,6 @@ font-weight: bold;
     padding-left:10px
   } 
 
-  .chat-box{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: skyblue;
-  }
-
-  .left{
-    justify-content: flex-start;
-  }
-
-  .right{
-    justify-content: flex-end;
-    margin-top: 50px;
-    max-width: 30%;
-  }
-
-  .left-chat{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: orange;
-    border: solid 2px;
-    border-radius:30px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .right-chat{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: orange;
-    border: solid 2px;
-    border-radius:30px;
-    padding: 10px;
-    width: auto;
 
   #rating{
 
@@ -607,15 +573,15 @@ font-weight: bold;
     }
   }
   
-  input {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-    border-bottom: 1px solid rgba(0,0,0,0.4);
-    text-align: center;
-  }
+  // input {
+  //   display: block;
+  //   width: 100%;
+  //   margin-top: 5px;
+  //   padding-bottom: 5px;
+  //   font-size: 16px;
+  //   border-bottom: 1px solid rgba(0,0,0,0.4);
+  //   text-align: center;
+  // }
   
   .forgot-pass {
     margin-top: 15px;
@@ -703,5 +669,4 @@ body {
     color: #f1f1f1;
     width: 100%;
     padding-top: 100%;
-}
 }
