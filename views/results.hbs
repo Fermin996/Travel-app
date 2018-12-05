@@ -8,19 +8,21 @@
         <h3>When?</h3><br>  
    From: <input type="text"><br>
     To: <input type="text">
-    <button type="button">Search for Buddies </button>
+    <button type="button">Search for Pals</button>
       </div>
     </nav>
     <section class="mid-body">
+
+      {{# each users}}
       <div class="pic-cards">
-        <img src="../images/chi-rene.JPG" width="150" class="card"/>
-        <img src="../images/chi-rene.JPG" width="150" class="card"/>
-        <img src="../images/chi-rene.JPG" width="150" class="card"/>
-        <br>
-        <img src="../images/chi-rene.JPG" width="150" class="card"/>
-        <img src="../images/chi-rene.JPG" width="150" class="card"/>
-        <img src="../images/chi-rene.JPG" width="150" class="card"/>
+        <a href="/profile/{{this._id}}"><img src="{{this.photoUrl}}" width="150" class="card"/></a>
+       <p>{{this.username}}</p>
+       <p>References: {{this.references}}</p>
+       <p>{x-day} to {x-day}</p>
+       <p>I'm here because I got tired of my dog barking. Looking for some people to hang with!</p>
       </div>
+      {{/each}}
+
       <div class="filter-items">
         <h2>Filters</h2>
         <ul>

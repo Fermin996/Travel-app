@@ -79,10 +79,13 @@ const index = require('./routes/index');
 const profile = require('./routes/profile');
 const authRoutes = require('./routes/auth');
 const results = require('./routes/results');
+const myProfile = require('./routes/myProfile');
+
 
 app.use('/auth', authRoutes);
 app.use('/', index);
 app.use('/profile', profile);
 app.use('/results', results);
+app.use('/myProfile', myProfile)
 
 module.exports = app;
