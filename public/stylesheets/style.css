@@ -1,29 +1,42 @@
 body {
   padding: 0px; }
 
-.navbar a .navbar-item:hover {
-  background-color: #f4511e;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.7s; }
+.navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover {
+  background-color: #fafafa;
+  color: #3273dc;
+  transition: .7s; }
 
 .navbar {
-  font-size: 20px;
+  padding-left: 10px;
+  font-size: 17px;
+  transition: .7s;
   text-align: center;
-  height: 80px; }
+  background-color: #d6b161;
+  height: 70px; }
 
 .navbar .navbar-item {
+  transition: .7s;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end; }
 
+.navbar #logo {
+  margin-top: -10px; }
+
 #form {
-  padding: 30px;
-  color: blue; }
+  background-color: rgba(0, 0, 0, 0.5); }
+
+#form-login {
+  padding: 300px;
+  color: black; }
+
+#login-square {
+  background: #eeeeee96;
+  width: 400px;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
 
 #logo:hover {
   opacity: .3;
@@ -40,7 +53,8 @@ body {
   font-size: 25px;
   color: burlywood;
   text-align: center;
-  padding: 100px; }
+  padding: 150px;
+  margin-bottom: 0px; }
 
 .mainTitle2 {
   font-size: 25px;
@@ -55,8 +69,20 @@ input {
   box-shadow: 0px 0px 5px grey;
   transition: .7s; }
 
+#username {
+  width: 300px;
+  height: 30px;
+  border: solid black 2px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px grey;
+  transition: .7s;
+  background-color: #fff9f7; }
+
+#username:hover {
+  height: 40px;
+  transition: .7s; }
+
 input:hover {
-  width: 500px;
   height: 34px;
   transition: .7s; }
 
@@ -86,31 +112,11 @@ input:hover {
   transition: 0.5s;
   cursor: pointer; }
 
-.hero-bkg-animated {
-  background: gray url(https://subtlepatterns.com/patterns/geometry2.png) repeat 0 0;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  height: 680px;
-  padding-top: 120px;
-  box-sizing: border-box;
-  animation: slide 20s linear infinite; }
-
-.hero-bkg-animated h1 {
-  font-family: sans-serif; }
-
-@keyframes slide {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: -400px 0; } }
-
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 5vh;
-  /* Height of the footer */
   background: black; }
 
 #footerlogos {
@@ -216,22 +222,26 @@ footer {
 #bio {
   background-color: rgba(0, 0, 0, 0.1);
   margin-right: 30px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 60%; }
 
 #interests {
   background-color: rgba(0, 0, 0, 0.1);
   margin-right: 30px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 60%; }
 
 #languages {
   background-color: rgba(0, 0, 0, 0.1);
   margin-right: 30px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 60%; }
 
 #references {
   background-color: rgba(0, 0, 0, 0.1);
   margin-right: 30px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 60%; }
 
 #rating {
   margin-right: 100px;
@@ -272,7 +282,12 @@ input, button {
   border: none;
   outline: none;
   background: none;
+<<<<<<< HEAD
   font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+=======
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  width: 260px; }
+>>>>>>> 01cf5f5d2caba5a487a4065d5fcc01ce16891e45
 
 .tip {
   font-size: 20px;
@@ -285,7 +300,12 @@ input, button {
   width: 900px;
   height: 550px;
   margin: 0 auto 100px;
+<<<<<<< HEAD
   background: #fff; }
+=======
+  background: #fff;
+  padding-top: 30px; }
+>>>>>>> 01cf5f5d2caba5a487a4065d5fcc01ce16891e45
 
 .form {
   position: relative;
@@ -451,9 +471,6 @@ label {
   .icon-link img {
     width: 100%;
     vertical-align: top; }
-  .icon-link--twitter {
-    left: auto;
-    right: 5px; }
 
 * {
   box-sizing: border-box; }
@@ -473,9 +490,14 @@ body {
 .content {
   position: fixed;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  color: #a87676;
   width: 100%;
   padding-top: 100%; }
+
+#form-container {
+  color: blue;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */
