@@ -1,34 +1,31 @@
 <div id="about">
-  <div id="imgprofile" style="background-image:url('{{photoUrl}}')">
-    
-  </div>
-<form>   
-      <div id="aboutinfo">
+  <div id="imgprofile" style="background-image:url('{{photoUrl}}')"></div>
+  <form method="POST" action="/auth/myProfile">   
+    <div id="aboutinfo">
       <p>{{username}}</p>
-    
-      <p>Age:</p><input type="text" name="age" value="{{age}}">
-       
-      <p>occupation</p><input type="text" name="occupation" value="{{occupation}}"></div>
-  </div>
-  
-  <div class="column">
-  <section>
-  <div class="bio">
-  <span>  
-  <h3>Bio</h3><br>
-  <input type="text" name="bio" value="{{bio}}">
-  </span>
-  <span>
-    <div class="column">
-  <h3>Interests</h3><br>
-  <input type="text" name="interests" value="{{interests}}">
-  </span>
-  <span>
+      <p>Age:</p>
+      <input type="text" name="age" value="{{age}}">
+      <p>occupation</p>
+      <input type="text" name="occupation" value="{{occupation}}">
     </div>
-  <h3>Languages</h3><br>
-  <input type="text" name="languages" value="{{languages}}">
-  </span>
-  </div>
-</form>
-  <button type="submit">Save</button>
-</section>
+</div>
+  
+<div class="column">
+    <section>
+      <div class="bio">
+        <span>  
+          <h3>Bio</h3><br>
+          <input type="text" name="bio" value="{{bio}}">
+        </span>
+        <span>
+          <div class="column">
+            <h3>Interests</h3><br>
+            <input type="text" name="interests" value="{{interests}}">
+        </span>
+      </div>
+        <h3>Languages</h3><br>
+        <input type="text" name="languages" value="{{languages}}">
+</div>
+  <input type="submit">Save</input>
+   </section>
+  </form>

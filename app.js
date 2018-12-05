@@ -68,7 +68,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 app.locals.title = 'Express - Generated with IronGenerator';
 
 
-// Enable authentication using session + passport
+//Enable authentication using session + passport
 app.use(session({
   secret: 'irongenerator',
   resave: true,
