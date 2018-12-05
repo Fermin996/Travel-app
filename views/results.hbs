@@ -1,16 +1,29 @@
 
+
     <nav class="small-search">
-      <div class="s1">
+     
         <h3>Where do you want to travel?</h3><br>
         <input type="text" placeholder="Search">
-      </div>
-      <div class="s2">
+      
         <h3>When?</h3><br>  
    From: <input type="text"><br>
     To: <input type="text">
     <button type="button">Search for Pals</button>
+
+    <div class="uk-position-medium uk-position-center-left uk-overlay uk-overlay-default">
+    <div class="filter-items">
+        <h2>Filters</h2>
+        <ul>
+          <li><a href="#">Locals</a></li>
+          <li><a href="#">Travelers</a></li>
+        </ul>
       </div>
+      
     </nav>
+    
+<br>
+
+
     <section class="mid-body">
 
       {{# each users}}
@@ -22,12 +35,7 @@
        <p>I'm here because I got tired of my dog barking. Looking for some people to hang with!</p>
       </div>
       {{/each}}
-
-      <div class="filter-items">
-        <h2>Filters</h2>
-        <ul>
-          <li><a href="#">Locals</a></li>
-          <li><a href="#">Travelers</a></li>
-        </ul>
-      </div>
+<br>
+      
     </section>
+
