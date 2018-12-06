@@ -132,10 +132,11 @@ footer {
 #footerlogos img {
   height: 20px;
   transition: .7s;
-  align-items: center; }
+  align-items: center;
+  margin-top: 10px; }
 
 #footerlogos img:hover {
-  height: 40px;
+  height: 25px;
   opacity: .4;
   transition: .3s; }
 
@@ -297,13 +298,14 @@ span {
 
 #signup-form {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 100vh;
+  height: 600px;
   width: 600px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: space-around;
-  border-radius: 15px; }
+  overflow-y: scroll;
+  border-radius: 15px;
+  margin-bottom: 100px; }
 
 #input-signup {
   margin-left: 50px;
@@ -331,6 +333,24 @@ span {
   transition: 0.5s;
   background: orange;
   margin-left: 200px; }
+
+#Login-BTN:hover {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  transition: 0.5s;
+  cursor: pointer; }
+
+#Login-BTN {
+  width: 200px;
+  height: 70px;
+  border-radius: 50px;
+  transition: 0.5s;
+  background: orange;
+  margin-left: 00px; }
 
 .account-message {
   margin-left: 160px;
@@ -405,7 +425,8 @@ body {
   position: relative; }
 
 .mid-body .pic-cards img {
-  border-radius: 50px; }
+  border-radius: 50px;
+  margin-top: 20px; }
 
 .mid-body .pic-cards p {
   width: 320px; }
@@ -418,5 +439,64 @@ body {
   margin-bottom: 70px;
   margin-left: 20px;
   height: 380px; }
+
+#profile_div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: white; }
+
+#aboutinfo {
+  color: black;
+  font-weight: 300;
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  width: 600px;
+  height: 550px;
+  border-radius: 10px; }
+
+#aboutinfo p {
+  font-size: 15px;
+  padding-top: 15px; }
+
+#aboutinfo #age {
+  width: 70px;
+  text-align: center; }
+
+#imgprofile {
+  margin-right: 30px; }
+
+#BTN_PROFILE {
+  width: 200px;
+  height: 70px;
+  border-radius: 50px;
+  transition: 0.5s;
+  background: orange; }
+
+#BTN_PROFILE:hover {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  transition: 0.5s;
+  cursor: pointer; }
+
+#aboutinfo input:only-of-type {
+  width: 200px;
+  height: 80px; }
+
+#aboutinfo input {
+  width: 300px;
+  height: 25px; }
+
+#aboutinfo #bio {
+  background-color: #fff;
+  margin-left: 35px;
+  text-align: left; }
 
 /*# sourceMappingURL=style.css.map */

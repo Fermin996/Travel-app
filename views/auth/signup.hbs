@@ -5,6 +5,9 @@
 <section class="Signup-section">
 
 
+
+
+
  <div class="uk-position-small uk-position-center uk-overlay uk-overlay-default">
 <form action="/auth/signup" method="POST" id="signup-form">
   <h2 class="tracking-in-expand">SIGN UP</h2>
@@ -35,11 +38,17 @@
   {{#if message }}
     <div class="error-message">{{ message }}</div>
   {{/if}}
+{{!--  --}}
+
+
+
+
+{{!--  --}}
 
   <button id="login-button">Create account</button>
 
   <p class="account-message"><br>
-    Do you already have an account?<br>
+    Do you already have an account?
     <a href="/auth/login">Login</a>
   </p>
 </form>
@@ -52,3 +61,26 @@
 
 
 </script>
+
+
+<div class="titleWrapper">
+	<h1 class="first">Ready</h1>	<h1 class="second">To meet your next pal?</h1>
+</div>
+
+<script>jQuery(document).ready(function(){
+	jQuery(".titleWrapper").addClass("ready");
+	
+jQuery(".titleWrapper h1").each(function(){
+	var fullString;
+	var characters = jQuery(this).text().split("");
+	
+	$this = jQuery(this);
+	$this.empty();
+	$.each(characters, function (i, el) {
+		if(el == " "){el = "&nbsp;"};
+    $this.append("<span>" + el + "</span");
+	});
+		
+});
+	
+});</script>
