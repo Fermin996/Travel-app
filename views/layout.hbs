@@ -7,32 +7,38 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script type="text/javascript" src="./node_datetime.js"></script>  
+  <script src="/javascripts/script.js"></script>
 </head>
 <body>
-
-
-
+  
   <div>
   
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
-    
+    <div>
    <a href="/"> <img  id="logo"src="../images/logo.png"  ></a>
-  
-    
+  </div>
+    <div class="fl" style="color:white;">
     <a class="navbar-item" href="/">Home</a>
     <a class="navbar-item" href="/auth/myProfile">Profile</a>
     <a class="navbar-item"href="/auth/login">Login</a>
     <a class="navbar-item" href="/auth/signup">Signup</a>
     <a class="navbar-item" href="/auth/logout">Logout</a>
-  
+  </div>
   </nav>
 </div>
   {{{body}}}
-
-
-<footer>
-
+  
+  <footer class="ft">
+<div>
+  <span>
+  Aviso de Privacidad
+  </span>
+  <span>
+    Copyright Travel Pal
+  </span>
+</div>
   
 <div id="footerlogos">
 <a href="/"> <img  src="../images/fblogo.png"></a>
@@ -42,8 +48,7 @@
 </div>
 </footer>
 
-  <script type="text/javascript" src="./node_datetime.js"></script>  
-  <script src="/javascripts/script.js"></script>
+  
 </body>
 
 </html>
