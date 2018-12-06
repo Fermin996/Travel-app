@@ -5,10 +5,12 @@ const Schema   = mongoose.Schema;
 const userSchema = new Schema({
   username: String,
   email: String,
+  status: String,
   location: String,
-  startDate:String,
+  description: String,
+  startDate: {type:String, default:"Today"},
   dates:[ ],
-  endDate: String,
+  endDate: {type:String, default:"indefinitely"},
   bio: String,
   age: Number,
   languages: String,
@@ -23,11 +25,7 @@ const userSchema = new Schema({
     type: Number,
     default: 0
   }, 
-  role:{
-    type:String,
-    enum:['GUEST', 'LOCAL', 'TRAVELER'],
-    default: 'GUEST',
-  }  
+    
 }, {
   timestamps: {
     createdAt: 'created_at',
