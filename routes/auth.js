@@ -54,7 +54,7 @@ router.get("/signup", (req, res, next) => {
 
 router.get('/myprofile', isLogged, (req,res,next)=>{
   //console.log(req.app.locals.loggedUser)
-  res.render('myProfile', req.app.locals.loggedUser)
+  res.render('myprofile', req.app.locals.loggedUser)
 })
 
 router.post('/myprofile', uploadCloud.single('photoURL'), (req, res, next) => {
