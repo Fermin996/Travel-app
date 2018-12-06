@@ -1,31 +1,33 @@
-<div id="about">
+
+<div>
+<div id="profile_div">
   <div id="imgprofile" style="background-image:url('{{photoUrl}}')"></div>
+  
   <form method="POST" action="/auth/myProfile">   
     <div id="aboutinfo">
-      <p>{{username}}</p>
+      <p>User: {{username}}</p>
       <p>Age:</p>
-      <input type="text" name="age" value="{{age}}">
-      <p>occupation</p>
+      <input type="text" name="age" id="age" value="{{age}}">
+      <p>Occupation</p>
       <input type="text" name="occupation" value="{{occupation}}">
-    </div>
-</div>
-  
-<div class="column">
-    <section>
-      <div class="bio">
-        <span>  
-          <h3>Bio</h3><br>
-          <input type="text" name="bio" value="{{bio}}">
+ 
+        
+          <h3>Bio</h3>
+
+          <textarea rows="4" cols="10" name="bio" id="bio" maxlength="160"value="{{bio}}">
+          
+          </textarea>
         </span>
         <span>
           <div class="column">
-            <h3>Interests</h3><br>
+            <h3>Interests</h3>
             <input type="text" name="interests" value="{{interests}}">
         </span>
-      </div>
-        <h3>Languages</h3><br>
+      
+        <h3>Languages</h3>
         <input type="text" name="languages" value="{{languages}}">
-</div>
-  <input type="submit">Save</input>
-   </section>
   </form>
+  </div>
+  <input  id="BTN_PROFILE" type="submit"></input>
+</section>
+  </div>

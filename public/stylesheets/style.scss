@@ -178,12 +178,14 @@ footer{
 height: 20px;
 transition: .7s;
 align-items: center;
+margin-top: 10px;
 }
 
 #footerlogos img:hover{
-  height: 40px;
+  height: 25px;
   opacity: .4;
   transition: .3s;
+  
   }
 
 
@@ -397,14 +399,16 @@ position: fixed;
 #signup-form{
 
   background-color: rgba($color: #000000, $alpha: 0.5);
-  height: 100vh;
+  height: 600px;
   width: 600px;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: space-around;
-  
+  overflow-y: scroll;
   border-radius:15px;
+  margin-bottom: 100px;
+
  
 }
 
@@ -417,9 +421,6 @@ position: fixed;
     padding:15px;
     
   }
-
-    
-  
   #login-button:hover{
     
     background-color: #f4511e;
@@ -430,6 +431,7 @@ position: fixed;
     margin: 4px 2px;
     transition: 0.5s;
     cursor: pointer;
+   
     margin-left: 200px;
   
   }
@@ -441,6 +443,35 @@ position: fixed;
     transition: 0.5s;
     background: orange;
     margin-left: 200px;
+   
+  }
+
+
+
+
+  //login
+  
+  #Login-BTN:hover{
+    
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    margin: 4px 2px;
+    transition: 0.5s;
+    cursor: pointer;
+    
+  
+  }
+
+  #Login-BTN{
+    width: 200px;
+    height: 70px;
+    border-radius: 50px;
+    transition: 0.5s;
+    background: orange;
+    margin-left: 00px;
    
   }
 
@@ -549,18 +580,17 @@ position: relative;
 .mid-body .pic-cards img{
   
   border-radius: 50px;
+
+  margin-top:20px;
   
   
 }
-.mid-body .pic-cards a{
- 
-}
+
 
 
 .mid-body .pic-cards p{
 
   width: 320px;
-
   
 
 
@@ -574,6 +604,103 @@ position: relative;
   
   flex-direction: column;
   margin-bottom:70px;
+  
   margin-left: 20px;
   height: 380px;
 }
+
+
+//////////// my profile
+
+#profile_div{
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background:rgb(255, 255, 255);
+  
+
+}
+
+#aboutinfo{
+
+color:black;
+font-weight: 300;
+background: rgba($color: #000000, $alpha: 0.1);
+margin-top: 30px;
+width: 600px;
+height: 550px;
+border-radius: 10px;
+}
+
+
+#aboutinfo p{
+  font-size: 15px;
+  padding-top: 15px;
+}
+  
+
+
+#aboutinfo #age{
+
+width: 70px;
+text-align: center;
+} 
+
+#imgprofile{
+
+  margin-right:30px;
+  
+}
+
+
+
+
+#BTN_PROFILE{
+  width: 200px;
+  height: 70px;
+  border-radius: 50px;
+  transition: 0.5s;
+  background: orange;
+ 
+  
+}
+#BTN_PROFILE:hover{
+  
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+
+#aboutinfo input:only-of-type{
+width: 200px;
+height: 80px;
+}
+
+#aboutinfo input{
+width: 300px;
+  height: 25px;
+}
+
+#aboutinfo #bio{
+  
+   
+    background-color: #fff;
+  margin-left: 35px;
+  text-align: left;
+  
+  }
+
+
+
+  
