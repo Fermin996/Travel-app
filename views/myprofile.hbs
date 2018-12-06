@@ -1,0 +1,50 @@
+<div>
+<div>
+<div id="profile_div">
+  <div id="imgprofile" style="background-image:url('{{photoUrl}}')"></div>
+  
+  <form method="POST" action="/auth/myProfile" enctype="multipart/form-data">   
+    <div id="aboutinfo">
+      <p>Upload New Photo</p>
+      <input type="file" name="photoURL" value="{{photoURL}}">
+      <p>User: {{username}}</p>
+      <p>Age:</p>
+      <input type="text" name="age" id="age" value="{{age}}">
+      <p>Occupation</p>
+      <input type="text" name="occupation" value="{{occupation}}">
+ 
+        
+          <h3>Bio</h3>
+
+          <textarea rows="4" cols="10" name="bio" id="bio" maxlength="160" value="{{bio}}">
+            
+          </textarea>
+        </span>
+        <span>
+          <div class="column">
+            <h3>Interests</h3>
+            <input type="text" name="interests" value="{{interests}}">
+        </span>
+      
+        <h3>Languages</h3>
+        <input type="text" name="languages" value="{{languages}}">
+
+        <h4>Tell others about your motivation for traveling!</h4>
+        <input type="text" name="description" value="{{description}}" maxlength="100">
+
+        <h4>I am a</h4>
+        <input list="status" name="status" value="{{status}}">
+        <datalist id="status">
+        <option value="Traveler"></option>
+        <option value="Local"></option>
+        </datalist>
+
+        <h4>Where are you planning on being? (what city?)</h4>
+        <input type="text" name="location" value="{{location}}">
+
+
+</div>
+  <input id="BTN_PROFILE" type="submit">
+   </section>
+  </form>
+</div>

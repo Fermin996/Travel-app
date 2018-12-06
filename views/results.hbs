@@ -1,0 +1,42 @@
+
+
+    <nav class="small-search">
+     
+        <h3>Where do you want to travel?</h3><br>
+        <input type="text" placeholder="Search">
+      
+
+   From: <input type="text"><br>
+    To: <input type="text">
+    <button type="button">Search for Pals</button>
+
+    <div class="uk-position-medium uk-position-center-left uk-overlay uk-overlay-default">
+    <div class="filter-items">
+        <h2>Filters</h2>
+        <ul>
+          <li><a href="#">Locals</a></li>
+          <li><a href="#">Travelers</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    
+<br>
+
+
+    <section class="mid-body">
+
+      {{# each users}}
+      <div class="pic-cards">
+        <a href="/profile/{{this._id}}"><img src="{{this.photoURL}}" width="150" class="card"/></a>
+       <p>{{this.username}}</p>
+       <p>{{status}}</p>
+       <p>References: {{this.references}}</p>
+       <p><b>{{startDate}}</b> to <b>{{endDate}}</b></p>
+       <p>{{description}}</p>
+      </div>
+      {{/each}}
+<br>
+      
+    </section>
+
