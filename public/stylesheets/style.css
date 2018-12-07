@@ -562,7 +562,8 @@ body {
   display: flex;
   justify-content: center;
   height: 100px;
-  align-items: flex-end; }
+  align-items: flex-end;
+  margin-top: -60px; }
 
 #send-message {
   width: 90px;
@@ -576,10 +577,23 @@ body {
   height: 40px;
   width: 400px; }
 
-.messages > ul > li {
+.messages > ul > li:nth-child(even) {
   margin: 5px 0 !important;
   background-color: #e2fec7;
   padding: 2px 4px;
   border-radius: 10px; }
+
+.messages > ul > li:nth-child(odd) {
+  margin: 5px 0 !important;
+  background-color: #69a7d7;
+  padding: 2px 4px;
+  border-radius: 10px; }
+
+.search-2 {
+  width: 300px;
+  font-size: 10px; }
+
+.to-bar {
+  margin-left: 400px; }
 
 /*# sourceMappingURL=style.css.map */
