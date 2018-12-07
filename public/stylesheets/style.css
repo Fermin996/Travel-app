@@ -38,7 +38,10 @@ body {
   margin-top: -10px; }
 
 #form {
+<<<<<<< HEAD
   background-color: rgba(0, 0, 0, 0.5);
+=======
+>>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
   height: 100vh;
   padding-bottom: 70px; }
 
@@ -82,7 +85,11 @@ input {
   transition: .7s; }
 
 input::placeholder {
+<<<<<<< HEAD
   color: #ccc;
+=======
+  color: #757474;
+>>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
   font-size: 16px;
   text-align: center; }
 
@@ -525,5 +532,45 @@ body {
   justify-content: space-between;
   height: 50px;
   align-items: center; }
+
+.chat {
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  display: flex;
+  padding-left: 30px;
+  justify-content: flex-start;
+  color: black;
+  font-size: 25px;
+  width: 100%;
+  height: 550px;
+  overflow-y: scroll; }
+
+.space {
+  width: 40%;
+  margin: 0 auto; }
+
+.send-message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: flex-end; }
+
+#send-message {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #565656;
+  color: white; }
+
+#body-message {
+  height: 40px;
+  width: 400px; }
+
+.messages > ul > li {
+  margin: 5px 0 !important;
+  background-color: #e2fec7;
+  padding: 2px 4px;
+  border-radius: 10px; }
 
 /*# sourceMappingURL=style.css.map */
