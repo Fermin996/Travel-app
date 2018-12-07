@@ -2,22 +2,23 @@
 
     <nav class="small-search">
      
+    <form action="/results" method="post"> 
         <h3>Where do you want to travel?</h3><br>
-        <input type="text" placeholder="Search">
+        <input class="search" type="text" placeholder="Search" name="location">
       
-
-   From: <input type="text"><br>
-    To: <input type="text">
-    <button type="button">Search for Pals</button>
+        From: <input id="search" type="date" name="startDate"><br>
+        To: <input id="search" type="date" name="endDate">
+    <button type="submit">Search for Pals </button>
+    </form>    
 
     <div class="uk-position-medium uk-position-center-left uk-overlay uk-overlay-default">
-    <div class="filter-items">
+    {{!-- <div class="filter-items">
         <h2>Filters</h2>
         <ul>
           <li><a href="#">Locals</a></li>
           <li><a href="#">Travelers</a></li>
         </ul>
-      </div>
+      </div> --}}
       
     </nav>
     

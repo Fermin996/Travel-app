@@ -1,7 +1,6 @@
 <div>
 <div>
 <div id="profile_div">
-  <div id="imgprofile" style="background-image:url('{{photoUrl}}')"></div>
   
   <form method="POST" action="/auth/myProfile" enctype="multipart/form-data">   
     <div id="aboutinfo">
@@ -29,8 +28,8 @@
         
         <input type="text" placeholder="Languages" name="languages" value="{{languages}}">
 
-        <h4></h4>
-        <input type="text" placeholder="Tell others about your motivation for traveling!" name="description" value="{{description}}" maxlength="100">
+        <h4>Tell others about your motivation for traveling!</h4>
+        <input type="text" name="description" value="{{description}}" maxlength="100">
 
         <h4>I am a</h4>
         <input list="status" name="status" value="{{status}}">

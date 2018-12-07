@@ -2,11 +2,8 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const passport = require('passport');
-<<<<<<< HEAD
 const uploadCloud = require('../helpers/cloudinary');
 
-=======
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
 
 
 const isLogged = (req, res, next) => {
@@ -52,12 +49,11 @@ router.post("/login", passport.authenticate("local"), (req, res, next)=>{
 });
 
 router.get("/signup", (req, res, next) => {
-  if (req.app.locals.loggedUser) return res.redirect('/auth/myProfile')
+  //if (req.app.locals.loggedUser) return res.redirect('/auth/myProfile')
   res.render("auth/signup");
 });
 
 router.get('/myprofile', isLogged, (req,res,next)=>{
-<<<<<<< HEAD
   //console.log(req.app.locals.loggedUser)
   res.render('myprofile', req.app.locals.loggedUser)
 })
@@ -102,23 +98,3 @@ router.get('/logout', (req, res) => {
 });
 
 module.exports = router
-=======
-  console.log(req.app.locals.loggedUser)
-  res.render('myProfile', req.app.locals.loggedUser)
-})
-
-router.post('/myprofile', (req, res, next) => {
-  User.findByIdAndUpdate(req.app.locals.loggedUser._id, req.body, {new: true})
-  .then(newUser => {
-    req.app.locals.loggedUser = newUser;
-    res.redirect('/auth/myProfile')
-  })
-  .catch(err=>{
-    res.send(err)
-  })
-})
-
-
-
-module.exports = router
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d

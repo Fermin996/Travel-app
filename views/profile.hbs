@@ -2,31 +2,38 @@
 <section id="left-section">
  
 
-      <div id="imgprofile" style="background-image:url('{{photoUrl}}')"></div>
+      <div id="imgprofile" style="background-image:url('{{photoURL}}')"></div>
            <div id="textabout">
-            <p id="name-profile">{{username}}</p>
+            <p id="name-profile"><b>{{username}}</b></p>
             <hr>
             <p>Age: {{age}}</p>
-            <p>{{occupation}}</p>
-            <p>{{location}}</p>
+            <p><i class="fas fa-briefcase"></i> {{occupation}}</p>
+            <p><i class="fas fa-map-marker-alt"></i> {{location}}</p>
             <p>From: {{startDate}} <br> To: {{endDate}}</p>
             </div>
-            <a href="/chat"><button id="#chat-BTN-Profile">Chat</button></a>
+            <a href="/chat"><button id="#chat-BTN-Profile"><i class="far fa-comments"></i><p>Chat</p></button></a>
  
     
 
-  <div id="bio">
+  {{!-- <div id="bio">
   <p id="h3">Bio</p>
   <p>{{bio}}</p>
                  
-  </div>
+  </div> --}}
 
 </section>
 
 <section id="right-section">
 
   <div id="interests">
-  <p id="h3">Interests</h3><br>
+  <p id="h3"><b>Bio</b></h3><br>
+  <hr> 
+  <p>{{bio}}</p>
+ 
+  </div>
+
+  <div id="interests">
+  <p id="h3"><b>Interests</b></h3><br>
   <hr> 
   <p>{{interests}}</p>
  
@@ -36,7 +43,7 @@
   
     <div id="languages">
      
-  <p id="h3">Languages</h3><br><hr> 
+  <p id="h3"><b>Languages</b></h3><br><hr> 
   <p>{{languages}}</p>
   
   
@@ -47,21 +54,22 @@
 </div>
 
  
- <div id="references">
+ {{!-- <div id="references">
    
   <p id="h3">References: {{references}}</p><hr> 
    
    
- </div></div>
+ </div> --}}
+ </div>
  
- <div id="rating">
+ {{!-- <div id="rating">
    
    <p id="h3">Rating</p> <div class="rating">
       
     
     <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
     </div>
-      </div>
+      </div> --}}
 
  
 

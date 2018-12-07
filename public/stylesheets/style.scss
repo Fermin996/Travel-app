@@ -50,11 +50,7 @@ body {
 #form{
 
   
-<<<<<<< HEAD
-  background-color:rgba(0, 0, 0,.5);
-=======
   // +
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
  height: 100vh;
   
 padding-bottom: 70px;
@@ -62,10 +58,6 @@ padding-bottom: 70px;
 }
 #form-login{
 padding:300px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
 color: white;
 }
 #login-square{
@@ -77,10 +69,14 @@ justify-content: center;
 
 
 
-<<<<<<< HEAD
-=======
+}
 
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
+.fa-sign-in-alt, .fa-home, .fa-user{
+  margin-right:8px;
+}
+
+.fa-comments{
+  font-size: 18px;
 }
 
 #logo:hover{
@@ -102,21 +98,15 @@ justify-content: center;
   text-align: center;
   padding: 150px;
   margin-bottom: 0px;
-<<<<<<< HEAD
-=======
  
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
   
 }
 .mainTitle2{
   font-size: 25px;
   color:white;
   text-align: center;
-<<<<<<< HEAD
-=======
   
   
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
 }
 
 input{
@@ -125,11 +115,7 @@ input{
   transition: .7s;
 }
 input::placeholder{
-<<<<<<< HEAD
-  color:#ccc;
-=======
   color:rgb(117, 116, 116);
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
   font-size: 16px;
   text-align: center;
 }
@@ -292,6 +278,9 @@ position: fixed;
     justify-content: center;
     margin-left: 30px;
     border-radius: 400px;
+    border-color:black;
+    border-style: solid;
+    border-width: 1px;
     margin-top: 10px;
   }
 
@@ -302,7 +291,7 @@ position: fixed;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.845);
     width: 350px;
-    height: 500px;
+    height: 350px;
     margin-top: 60px;
     margin-left: 40px;
     align-items: center;
@@ -340,6 +329,10 @@ position: fixed;
       text-align: center;
     }      
 
+    #textabout p{
+      margin-top:5px;
+      color: black;
+    }
 
   #bio{
     margin-top:15px;
@@ -695,7 +688,7 @@ position: relative;
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
-  background:rgb(255, 255, 255);
+  background-color:rgba(255, 165, 0, .8);
   
 
 }
@@ -704,13 +697,15 @@ position: relative;
 
 color:black;
 font-weight: 300;
-background: rgba($color: #000000, $alpha: 0.1);
+background-color:rgb(240, 232, 232);
 margin: 30px 0 80px 0;
 width: 600px;
 // height: 550px;
 border-radius: 10px;
+border-style: solid;
+border-width:2px;
 text-align: center;
-
+box-shadow: 3px 3px 10px 5px #000;
 }
 
 
@@ -743,7 +738,7 @@ text-align: center;
   border-radius: 50px;
   transition: 0.5s;
   background: orange;
- 
+  margin-bottom:20px;
   
 }
 #BTN_PROFILE:hover{

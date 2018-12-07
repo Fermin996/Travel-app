@@ -38,10 +38,6 @@ body {
   margin-top: -10px; }
 
 #form {
-<<<<<<< HEAD
-  background-color: rgba(0, 0, 0, 0.5);
-=======
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
   height: 100vh;
   padding-bottom: 70px; }
 
@@ -55,6 +51,12 @@ body {
   display: flex;
   align-content: center;
   justify-content: center; }
+
+.fa-sign-in-alt, .fa-home, .fa-user {
+  margin-right: 8px; }
+
+.fa-comments {
+  font-size: 18px; }
 
 #logo:hover {
   opacity: .3;
@@ -85,11 +87,7 @@ input {
   transition: .7s; }
 
 input::placeholder {
-<<<<<<< HEAD
-  color: #ccc;
-=======
   color: #757474;
->>>>>>> 44f043ed073ec14b79fce5e06b266119ca96f84d
   font-size: 16px;
   text-align: center; }
 
@@ -202,6 +200,9 @@ footer {
   justify-content: center;
   margin-left: 30px;
   border-radius: 400px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
   margin-top: 10px; }
 
 #left-section {
@@ -210,7 +211,7 @@ footer {
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.845);
   width: 350px;
-  height: 500px;
+  height: 350px;
   margin-top: 60px;
   margin-left: 40px;
   align-items: center;
@@ -236,6 +237,10 @@ hr {
   flex-direction: column;
   justify-content: flex-start;
   text-align: center; }
+
+#textabout p {
+  margin-top: 5px;
+  color: black; }
 
 #bio {
   margin-top: 15px;
@@ -474,16 +479,19 @@ body {
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
-  background: white; }
+  background-color: rgba(255, 165, 0, 0.8); }
 
 #aboutinfo {
   color: black;
   font-weight: 300;
-  background: rgba(0, 0, 0, 0.1);
+  background-color: #f0e8e8;
   margin: 30px 0 80px 0;
   width: 600px;
   border-radius: 10px;
-  text-align: center; }
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  box-shadow: 3px 3px 10px 5px #000; }
 
 #aboutinfo p {
   font-size: 15px;
@@ -501,7 +509,8 @@ body {
   height: 70px;
   border-radius: 50px;
   transition: 0.5s;
-  background: orange; }
+  background: orange;
+  margin-bottom: 20px; }
 
 #BTN_PROFILE:hover {
   background-color: #f4511e;
