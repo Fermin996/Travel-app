@@ -5,6 +5,7 @@ const passport = require('passport');
 const uploadCloud = require('../helpers/cloudinary');
 
 
+
 const isLogged = (req, res, next) => {
   if (!req.app.locals.loggedUser) return res.redirect('/auth/login');
   next();
@@ -66,7 +67,7 @@ router.post('/myprofile', uploadCloud.single('photoURL'), (req, res, next) => {
   } else {req.body.photoURL = req.file.url }
   
   //const photoURL = req.file.url
-  User.findByIdAndUpdate(id, req.body, {new:true})
+  User.findByIdAndUpdate(id, {$set: req.body}, {new:true})
   .then(user=>{
     res.redirect('/auth/myProfile')
  })
@@ -82,5 +83,19 @@ passport.authenticate('facebook', {
 
 router.post('/facebook', passport.authenticate('facebook', {scope: ['email']}), (req, res)=>{})
 
+// var logout = function() {
+//   return function (req, res, next) {
+//       req.logout();
+//       delete req.session;
+//       next();
+//   };
+// };
+
+router.get('/logout', (req, res) => {
+  req.logout();
+  console.log('working')
+  req.user=null;
+  res.redirect('/');
+});
 
 module.exports = router

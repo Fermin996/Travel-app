@@ -5,9 +5,8 @@ const Schema   = mongoose.Schema;
 var dateFormat = require('dateformat');
 var now = new Date();
 
-now = dateFormat(now, "mm/d/yyyy")
+now = dateFormat(now, "m/dd/yyyy")
 
-console.log(now)
 
 const userSchema = new Schema({
   username: String,
@@ -18,7 +17,6 @@ const userSchema = new Schema({
   location: String,
   description: String,
   startDate: {type:String, default:now},
-  dates:[],
   endDate: {type:String, default:"indefinitely"},
   bio: String,
   age: Number,

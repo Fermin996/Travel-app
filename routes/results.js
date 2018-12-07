@@ -10,13 +10,15 @@ router.post('/', (req, res, next) => {
   console.log(req.body)
 
   const location = req.body.location;
-  const startDate = req.body.startDate;
-  const endDate = req.body.endDate;
-
+  const startDate = new Date(req.body.startDate);
+  const endDate = new Date(req.body.endDate);
   User.find({location: location})
   .then(users =>{
-    console.log(users)
-    res.render('results', {users})
+    let filteredUsers = users.filter(user => {
+      let userStartDate = new Date(user.startDate);
+      return userStartDate >= startDate && userStartDate <= endDate
+    })
+    res.render('results', {users: filteredUsers})
   }).catch(e=>{
     console.log(e)
   })
