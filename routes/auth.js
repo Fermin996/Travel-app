@@ -25,7 +25,7 @@ router.post("/signup", (req, res, next) => {
   User.register(req.body, req.body.password)
   .then(user => {
     
-    res.redirect('myProfile');
+    res.redirect('login');
   })
   .catch(err => {
     res.send(err);
