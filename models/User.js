@@ -5,7 +5,9 @@ const Schema   = mongoose.Schema;
 var dateFormat = require('dateformat');
 var now = new Date();
 
-now = dateFormat(now, "mm/d")
+now = dateFormat(now, "mm/d/yyyy")
+
+console.log(now)
 
 const userSchema = new Schema({
   username: String,
@@ -16,7 +18,7 @@ const userSchema = new Schema({
   location: String,
   description: String,
   startDate: {type:String, default:now},
-  dates:[ ],
+  dates:[],
   endDate: {type:String, default:"indefinitely"},
   bio: String,
   age: Number,
@@ -26,7 +28,7 @@ const userSchema = new Schema({
   occupation: String,
   photoURL: {
     type: String,
-    default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0PYuh3GbOstcwFJLzp6ThS_ta-XK_4vDKt5U7i18cfexXRuMX'
+    default: "https://cdn2.vectorstock.com/i/1000x1000/19/01/user-icon-male-person-symbol-profile-avatar-sign-vector-18991901.jpg"
   },
   references:{
     type: Number,

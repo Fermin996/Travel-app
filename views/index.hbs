@@ -1,7 +1,7 @@
 <video autoplay muted loop id="myVideo">
   <source src="./images/movie.mp4" type="video/mp4">
 </video>
-<form action="/results" method="POST">
+<form action="/results" method="post">
 <div class="content">
   <section id="form">
   <section class="mainTitle">
@@ -11,19 +11,19 @@
   <section class="mainTitle2">
     
   <br>
-  <input class="search" type="text" placeholder="Search">
+  <input class="search" type="text" placeholder="Search" name="location">
   <br>
 
   <br>
   From:
   <br>
   
-  <input id="search" type="date">
+  <input id="search" type="date" name="startDate">
   <br>
   To:
   
   <br> 
-  <input id="search" type="date">
+  <input id="search" type="date" name="endDate">
 	<br>
   <br>
 	<button id="LNDBTN" type="submit">Search for Pals </button> </form>
