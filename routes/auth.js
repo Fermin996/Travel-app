@@ -70,8 +70,7 @@ router.post('/myprofile', uploadCloud.single('photoURL'), (req, res, next) => {
   User.findByIdAndUpdate(id, {$set: req.body}, {new:true})
   .then(user=>{
     res.redirect('/auth/myProfile')
- })
-  
+  })
 })
 
 
