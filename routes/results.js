@@ -4,9 +4,7 @@ var User = require('../models/User')
 
 
 router.post('/', (req, res, next) => {
-  // User.find(function(err, users){
-  //   res.render('results', {users: users})
-  // })
+
   console.log(req.body)
 
   const location = req.body.location;

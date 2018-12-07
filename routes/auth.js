@@ -16,12 +16,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
-  // const username = req.body.username;
-  // const password = req.body.password;
-  // if (username === "" || password === "") {
-  //   res.render("auth/signup", { message: "Indicate username and password" });
-  //   return;
-  // }
+  
   User.register(req.body, req.body.password)
   .then(user => {
     
@@ -33,7 +28,6 @@ router.post("/signup", (req, res, next) => {
 })
 
 router.get("/login", (req, res, next) => {
-  //if (req.app.locals.loggedUser) return res.redirect('/auth/myProfile')
   res.render("auth/login", { "message": req.flash("error") 
 });
   //res.redirect('signup')
@@ -42,14 +36,9 @@ router.get("/login", (req, res, next) => {
 router.post("/login", passport.authenticate("local"), (req, res, next)=>{
   req.app.locals.loggedUser = req.user
   res.redirect('/auth/myProfile')
-  // successRedirect: "/",
-  // failureRedirect: "/auth/login",
-  // failureFlash: true,
-  // passReqToCallback: true
 });
 
 router.get("/signup", (req, res, next) => {
-  //if (req.app.locals.loggedUser) return res.redirect('/auth/myProfile')
   res.render("auth/signup");
 });
 
@@ -82,13 +71,6 @@ passport.authenticate('facebook', {
 
 router.post('/facebook', passport.authenticate('facebook', {scope: ['email']}), (req, res)=>{})
 
-// var logout = function() {
-//   return function (req, res, next) {
-//       req.logout();
-//       delete req.session;
-//       next();
-//   };
-// };
 
 router.get('/logout', (req, res) => {
   req.logout();

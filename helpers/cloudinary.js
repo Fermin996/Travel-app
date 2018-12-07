@@ -1,24 +1,3 @@
-// const cloudinary = require("cloudinary");
-// const cloudinaryStorage = require("multer-storage-cloudinary");
-// const multer = require("multer");
-
-// cloudinary.config({
-//   cloud_name: "dp7uswlet",
-//   api_key: "384357197549155",
-//   api_secret: "qnzwQYwy8-4GP38cqmq1d6C6FpQ"
-// });
-// var storage = cloudinaryStorage({
-//   cloudinary: cloudinary,
-//   folder: "images",
-//   allowedFormats: ["jpg", "png", "jpeg", "gif", "pdf"],
-//   filename: function(req, file, cb) {
-//     cb(null, file.originalname);
-//   }
-// });
-
-// const uploadCloud = multer({ storage: storage });
-// module.exports = uploadCloud;
-
 const cloudinary = require('cloudinary');
 const cloudinaryStorage = require('multer-storage-cloudinary');
 const multer = require('multer');
